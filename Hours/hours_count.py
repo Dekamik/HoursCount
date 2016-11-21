@@ -3,6 +3,7 @@ from sys import argv
 
 def start_day():
     # Post date and time to sheet
+    # Save date and time to cache
     pass
 
 
