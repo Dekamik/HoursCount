@@ -1,4 +1,6 @@
+import datetime
 import os
+import time
 
 
 class TimestampCache:
@@ -7,6 +9,9 @@ class TimestampCache:
 
     def __init__(self):
         pass
+
+    def get_timestamp(self):
+        return time.mktime(datetime.datetime.strptime(self.test_time, self.time_format).timetuple())
 
     def save_timestamp(self, time_to_save):
         with open(self.file_path + self.file_name, 'w') as f:
